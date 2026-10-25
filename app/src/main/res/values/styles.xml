@@ -1,0 +1,1 @@
+<resources><style name="Theme.LinkPad" parent="android:style/Theme.Material.NoActionBar"><item name="android:fontFamily">sans</item><item name="android:colorAccent">#83B8FF</item><item name="android:navigationBarColor">#0B1020</item><item name="android:windowFullscreen">true</item></style></resources>
