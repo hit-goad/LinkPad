@@ -40,7 +40,7 @@ class MainActivity : ComponentActivity(), SensorEventListener {
         else hid.register()
         setContent { LinkPadScreen() }
     }
-    override fun onRequestPermissionsResult(r: Int, p: Array<out String>, g: IntArray) { super.onRequestPermissionsResult(r,p,g); if (g.all { it == PackageManager.PERMISSION_GRANTED }) hid.register() else status = "需要“附近设备”权限才能作为蓝牙手柄" }
+    override fun onRequestPermissionsResult(r: Int, p: Array<String>, g: IntArray) { super.onRequestPermissionsResult(r,p,g); if (g.all { it == PackageManager.PERMISSION_GRANTED }) hid.register() else status = "需要“附近设备”权限才能作为蓝牙手柄" }
     @Composable private fun LinkPadScreen() {
         val tick = refresh // makes sensor / touch state redraw
         var viewMode by remember { mutableStateOf(false) }
